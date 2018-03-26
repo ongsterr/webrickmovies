@@ -13,5 +13,13 @@
         <li><strong><%= "#{x.title}: "%></strong><%= "#{x.description}" %></li>
         <% end %>
     </ul>
+    <p><strong>What movies do you want to add to your favorite list?</strong></p>
+    <form action="/" method="post">
+        Movie title: </br>
+        <input type="text" name="movie-title" id="movie-title" placeholder="Movie title..."></br>
+        Movie description: </br>
+        <input type="text" name="movie-description" id="movie-description" placeholder="Movie description..."></br></br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

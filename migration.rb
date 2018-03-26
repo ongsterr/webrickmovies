@@ -1,5 +1,5 @@
 require 'sequel'
-DB = Sequel.connect('sqlite://movies')
+DB = Sequel.connect('sqlite://development')
 
 # Create a database
 

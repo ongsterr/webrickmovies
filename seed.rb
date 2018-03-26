@@ -1,7 +1,7 @@
 # Seeding = populating our database with data
 
 require 'sequel'
-DB = Sequel.connect('sqlite://movies')
+DB = Sequel.connect('sqlite://development')
 movies_table = DB[:movies] # The data you insert must have the structure you set up in the migration file incl. the name of the columns
 
 movies = [
