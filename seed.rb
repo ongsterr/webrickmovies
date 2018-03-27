@@ -23,4 +23,21 @@ movies = [
     }
 ]
 
-movies_table.multi_insert(movies)
+# movies_table.multi_insert(movies)
+
+actors_table = DB[:actors]
+
+actors = [
+    {
+        fname: 'James',
+        lname: 'Bond',
+        age: 34,
+    },
+    {
+        fname: 'Jeniffer',
+        lname: 'Lawrence',
+        age: 30,
+    },
+]
+
+actors_table.multi_insert(actors)

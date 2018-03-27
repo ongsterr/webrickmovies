@@ -10,18 +10,18 @@ class Router < WEBrick::HTTPServlet::AbstractServlet
             response.status = 200
             response['Content-Type'] = 'text/html'
             movies = Movie.all
-            response.body = ERB.new(html_file("index.html")).result(binding)
+            response.body = ERB.new(html_file("index.html")).result(binding) # What is binding?
         end
     end
 
     def do_POST(request, response)
         case request.path
-        when '/'
+        when '/submission'
             new_movie = request.query
             Movie.insert(title: new_movie["movie-title"], description: new_movie["movie-description"])
             response.status = 200 # This shows the status of website serving
             response['Content-Type'] = 'text/html'
-            response.body = "Thanks for your submission!"
+            response.body = ERB.new(html_file("favorite.html")).result(binding)
         end
     end
 
