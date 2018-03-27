@@ -4,7 +4,7 @@ require 'erb'
 require_relative 'main'
 
 class Router < WEBrick::HTTPServlet::AbstractServlet
-    def do_GET(request, response)
+    def do_GET(request, response) # The "server" is actually searching for this method
         case request.path
         when '/'
             response.status = 200
